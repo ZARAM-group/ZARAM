@@ -15,5 +15,5 @@ connectDB()
 app.use("/",router)
 
 app.listen(port, () => {
-  console.log(`app listening at ${process.env.url}:${port}`);
+  console.log(`app listening at ${process.env.url}`);
 });
