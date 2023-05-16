@@ -3,6 +3,8 @@ import "./styles.css"
 import zarahome from "../assets/img/zarahome.jpg"
 import logo from "../assets/Logo.png"
 import bag from "../assets/img/bag.png"
+import menu from "../assets/img/menu.png"
+
 export default function Home() {
   return (
     <div>
@@ -11,6 +13,7 @@ export default function Home() {
       </div>
       <nav className="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
             <div className="container px-4 px-lg-5">
+              <Image id='menu' src={menu} alt="..."/>
                 <Image id="logo" className="navbar-brand" src={logo} alt="..." />
                 <button className="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
