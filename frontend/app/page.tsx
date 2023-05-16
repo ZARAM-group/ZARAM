@@ -1,7 +1,10 @@
 import Image from 'next/image'
+import Link from "next/link"
 import "./styles.css"
 import www from "../assets/img/bg-masthead.jpg"
 import logo from "../assets/Logo.png"
+
+import Search from "../components/Search/Search"
 
 export default function Home() {
   return (
@@ -15,8 +18,8 @@ export default function Home() {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarResponsive">
                     <ul className="navbar-nav ms-auto">
-                        <li className="nav-item"><a className="nav-link" href="#about">About</a></li>
-                        <li className="nav-item"><a className="nav-link" href="#projects">Projects</a></li>
+                        <li className="nav-item"><Link href="/search"><Search/></Link></li>
+                        <li className="nav-item"><Link className="nav-link" href="/login">Log in</Link></li>
                         <li className="nav-item"><a className="nav-link" href="#signup">Contact</a></li>
                     </ul>
                 </div>
