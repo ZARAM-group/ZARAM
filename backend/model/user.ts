@@ -1,6 +1,6 @@
 import mongoose, { Schema, Document } from "mongoose";
 
-export interface UserDocument extends Document {
+export interface User extends Document {
   firstName: string;
   lastName: string;
   username: string;
@@ -20,6 +20,6 @@ const userSchema: Schema = new Schema({
   cart: [String],
 });
 
-const User = mongoose.model<UserDocument>("User", userSchema);
+const user = mongoose.model<User>("user", userSchema);
 
-export default User;
+export default user;
