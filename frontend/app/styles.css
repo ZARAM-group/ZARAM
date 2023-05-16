@@ -5,14 +5,22 @@
   src: url("../Fonts/Helvetica\ Neue\ UltraLight.ttf");
 }
 
+#menu{
+  height: 25px;
+    width: 25px;
+    transform: translate(-126px,-41px);
+}
+
+
 #logo{
   height: 200px; 
   width: 200px;
   transform: translate(-118px, -5px);
-  color: transparent;
-  width: 6.9cm;
-  height: 4.5cm;
+    color: transparent;
+    width: 6.9cm;
+    height: 4.5cm;
 }
+
 
 #pushImg{
   height: 200px;
@@ -3899,6 +3907,7 @@ textarea.form-control-lg {
   flex-basis: 100%;
   flex-grow: 1;
   align-items: center;
+  transform: translate(157px, -25px);
 }
 
 .navbar-toggler {
