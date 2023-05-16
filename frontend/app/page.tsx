@@ -1,11 +1,14 @@
 import Image from 'next/image'
 import "./styles.css"
-import www from "../assets/img/bg-masthead.jpg"
+import zarahome from "../assets/img/zarahome.jpg"
 import logo from "../assets/Logo.png"
-
+import bag from "../assets/img/bag.png"
 export default function Home() {
   return (
     <div>
+      <div id="pushImg"> 
+      
+      </div>
       <nav className="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
             <div className="container px-4 px-lg-5">
                 <Image id="logo" className="navbar-brand" src={logo} alt="..." />
@@ -15,9 +18,9 @@ export default function Home() {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarResponsive">
                     <ul className="navbar-nav ms-auto">
-                        <li className="nav-item"><a className="nav-link" href="#about">About</a></li>
-                        <li className="nav-item"><a className="nav-link" href="#projects">Projects</a></li>
-                        <li className="nav-item"><a className="nav-link" href="#signup">Contact</a></li>
+                        <li className="nav-item"><a className="nav-link" href="#about">LOG IN</a></li>
+                        <li className="nav-item"><a className="nav-link" href="#projects">HELP</a></li>
+                        <li className="nav-item"><a className="nav-link" href="#bag"><Image id="bag" src={bag} alt=".."/></a></li>
                     </ul>
                 </div>
             </div>
@@ -25,33 +28,17 @@ export default function Home() {
         <header className="masthead">
             <div className="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
                 <div className="d-flex justify-content-center">
-                    <div className="text-center">
-                        <h1 className="mx-auto my-0 text-uppercase">ZARA</h1>
-                        <h2 className="text-white-50 mx-auto mt-2 mb-5">A free, responsive, one page Bootstrap theme created by Start Bootstrap.</h2>
-                        <a className="btn btn-primary" href="#about">Get Started</a>
-                    </div>
+                    
                 </div>
             </div>
         </header>
         <section className="about-section text-center" id="about">
-            <div className="container px-4 px-lg-5">
-                <div className="row gx-4 gx-lg-5 justify-content-center">
-                    <div className="col-lg-8">
-                        <h2 className="text-white mb-4">Built with Bootstrap 5</h2>
-                        <p className="text-white-50">
-                            Grayscale is a free Bootstrap theme created by Start Bootstrap. It can be yours right now, simply download the template on
-                            <a href="https://startbootstrap.com/theme/grayscale/">the preview page.</a>
-                            The theme is open source, and you can use it for any purpose, personal or commercial.
-                        </p>
-                    </div>
-                </div>
-                <img className="img-fluid" src="assets/img/ipad.png" alt="..." />
-            </div>
+
         </section>
         <section className="projects-section bg-light" id="projects">
             <div className="container px-4 px-lg-5">
                 <div className="row gx-0 mb-4 mb-lg-5 align-items-center">
-                    <div className="col-xl-8 col-lg-7"><Image className="img-fluid mb-3 mb-lg-0" src={www} alt="..." /></div>
+                    <div className="col-xl-8 col-lg-7"><Image className="img-fluid mb-3 mb-lg-0" src={zarahome} alt="..." /></div>
                     <div className="col-xl-4 col-lg-5">
                         <div className="featured-text text-center text-lg-left">
                             <h4>Shoreline</h4>
