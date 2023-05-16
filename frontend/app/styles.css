@@ -4,13 +4,11 @@
   font-family: "default";
   src: url("../Fonts/Helvetica\ Neue\ UltraLight.ttf");
 }
-
 #menu{
   height: 25px;
     width: 25px;
     transform: translate(-126px,-41px);
 }
-
 
 #logo{
   height: 200px; 
