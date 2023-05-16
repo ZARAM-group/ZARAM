@@ -15,8 +15,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 connectDB();
 
-app.use("/items", itemsRouter);
-app.use("/user", userRouter)
+app.use("/items", itemsRouter)
+app.use("/user",userRouter)
+
+
 
 app.listen(port, () => {
   console.log(`app listening at ${process.env.url}`);
