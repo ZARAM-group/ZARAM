@@ -1,8 +1,9 @@
-const items=require("../model/items")
+import { Request, Response } from "express"
+import items from "../model/items"
 
-module.exports={
+export default {
 
-  getByColor: (req,res)=>{
+  getByColor: (req: Request,res: Response)=>{
     const { color }=req.params
     items.find({color: color}).then(items=>res.send(items))
   },

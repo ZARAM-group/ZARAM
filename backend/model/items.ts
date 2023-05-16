@@ -1,6 +1,19 @@
-const mongoose = require('mongoose');
 
-const schema= mongoose.Schema({
+import mongoose, { Schema, Document } from 'mongoose';
+
+export interface Item extends Document {
+  name: string;
+  price: number;
+  color: string;
+  type: string;
+  size: string;
+  gender: string;
+  description: string;
+  conditions: string[];
+}
+
+const itemSchema: Schema = new Schema({
+
   name: String,
   price: Number,
   color: String,
@@ -13,4 +26,9 @@ const schema= mongoose.Schema({
 
 const items=mongoose.model("items",schema)
 
-module.exports=items
+  conditions: [String],
+});
+
+const ItemModel = mongoose.model<Item>('items', itemSchema);
+
+export default ItemModel;
