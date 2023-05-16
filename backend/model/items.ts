@@ -1,4 +1,3 @@
-
 import mongoose, { Schema, Document } from 'mongoose';
 
 export interface Item extends Document {
@@ -13,7 +12,6 @@ export interface Item extends Document {
 }
 
 const itemSchema: Schema = new Schema({
-
   name: String,
   price: Number,
   color: String,
@@ -21,11 +19,6 @@ const itemSchema: Schema = new Schema({
   size: String,
   gender: String,
   description: String,
-  conditions: Array
-})
-
-const items=mongoose.model("items",schema)
-
   conditions: [String],
 });
 
