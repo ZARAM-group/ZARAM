@@ -4,6 +4,7 @@ dotenv.config();
 import express from 'express';
 import cors from 'cors';
 import itemsRouter from './routes/items';
+import userRouter from './routes/user'
 import connectDB from './database/connection';
 
 const app = express();
@@ -15,6 +16,7 @@ app.use(cors());
 connectDB();
 
 app.use("/items", itemsRouter);
+app.use("/user",userRouter)
 
 app.listen(port, () => {
   console.log(`app listening at ${process.env.url}`);
