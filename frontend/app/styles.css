@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+@font-face {
+  font-family: "default";
+  src: url("../Fonts/Helvetica\ Neue\ UltraLight.ttf");
+}
 
 #menu{
   height: 25px;
@@ -9,12 +13,12 @@
 
 
 #logo{
-  height: 150px;
-  width: 150px;
-  transform: translate(-29px, -17px);
-  color: transparent;
-  width: 6.9cm;
-  height: 4cm;
+  height: 200px; 
+  width: 200px;
+  transform: translate(-118px, -5px);
+    color: transparent;
+    width: 6.9cm;
+    height: 4.5cm;
 }
 
 
@@ -25,7 +29,7 @@
 
 #bag{
   height: 40px;
-    width: 40px;
+  width: 40px;
 }
 
 :root {
@@ -3715,6 +3719,7 @@ textarea.form-control-lg {
   font-weight: var(--bs-nav-link-font-weight);
   color: var(--bs-nav-link-color);
   text-decoration: none;
+  font-family: "default";
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
