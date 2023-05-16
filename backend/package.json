@@ -12,7 +12,8 @@
     "dotenv": "*",
     "express": "*",
     "jsonwebtoken": "*",
-    "mongoose": "*"
+    "mongoose": "*",
+    "typescript": "^5.0.4"
   },
   "devDependencies": {
     "@types/cors": "^2.8.13",
