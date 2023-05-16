@@ -3,7 +3,6 @@ import Link from "next/link"
 import "./styles.css"
 import zarahome from "../assets/img/zarahome.jpg"
 import logo from "../assets/Logo.png"
-
 import Search from "../components/Search/Search"
 import bag from "../assets/img/bag.png"
 import menu from "../assets/img/menu.png"
