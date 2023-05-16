@@ -24,8 +24,9 @@ export default function Home() {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarResponsive">
                     <ul className="navbar-nav ms-auto">
+
                         <li className="nav-item"><Link href="/search"><Search/></Link></li>
-                        <li className="nav-item"><a className="nav-link" href="#about">LOG IN</a></li>
+                        <li className="nav-item"><Link className="nav-link" href="/login">Log in</Link></li>
                         <li className="nav-item"><a className="nav-link" href="#projects">HELP</a></li>
                         <li className="nav-item"><a className="nav-link" href="#bag"><Image id="bag" src={bag} alt=".."/></a></li>
                     </ul>
