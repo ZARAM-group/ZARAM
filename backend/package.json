@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@types/dotenv": "^8.2.0",
+    "@types/mongoose": "^5.11.97",
     "bcrypt": "*",
     "cors": "*",
     "dotenv": "^16.0.3",
