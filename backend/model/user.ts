@@ -13,7 +13,6 @@ export interface User extends Document {
 const userSchema: Schema = new Schema({
   fName: String,
   lName: String,
-  username: String,
   password: String,
   email: String,
   isAdmin: Boolean,
