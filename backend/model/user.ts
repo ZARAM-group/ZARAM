@@ -20,6 +20,6 @@ const userSchema: Schema = new Schema({
   cart: [String],
 });
 
-const user = mongoose.model<User>("user", userSchema);
+const user = mongoose.model<User>("users", userSchema);
 
 export default user;
