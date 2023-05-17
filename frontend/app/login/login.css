@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "default";
+  src: url("../../Fonts/Helvetica\ Neue\ UltraLight.ttf");
+}
+
+@font-face {
+  font-family: "medium";
+  src: url("../../Fonts/Helvetica\ Neue\ W01\ 66\ Medium\ It.ttf");
+}
+
+.login-container{
+  display: flex;
+  flex-direction: column;
+}
