@@ -1,6 +1,9 @@
+"use client"
+
 import { useState } from "react";
 
-const SearchBar = () => {
+const HelpBar = () => {
+  
   const [query, setQuery] = useState("");
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -27,4 +30,4 @@ const SearchBar = () => {
   );
 };
 
-export default SearchBar;
+export default HelpBar;
