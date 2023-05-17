@@ -1,9 +1,10 @@
 import { Request, Response } from "express";
 import User from "../model/user";
 import bcrypt from "bcrypt"
-import jwt from "jsonwebtoken"
+import jwt, { Secret } from "jsonwebtoken"
 
 export default {
+
     getAll:(req: Request, res: Response)=> {
         User.find().then(User=>res.send(User))
       },
@@ -16,13 +17,13 @@ export default {
 
     removeFromCart:(req:Request , res: Response)=>{
         const{UserId,itemId}=req.params
-        
+        User.findByIdAndUpdate(UserId,{$pull:{cart:itemId}}).then(User=>res.send(User))
 
     },
 
     signup: async (req: Request, res: Response)=>{
         const { user, pass, fName, lName, email } = req.body
-        const existingUser=await User.find({username: user})
+        const existingUser = await User.findOne({username: user})
         if(existingUser){
             res.send({message: "Username Already Exists"})
         }
@@ -37,11 +38,12 @@ export default {
                 isAdmin: false,
                 cart: []
             }
-            User.create(newUser)
+            User.create(newUser).then(user=>res.send(user))
         }
     },
 
     login: async (req: Request, res: Response)=>{
+        res.send(process.env.token)
         const { user, pass } = req.body
         const loggedUser = await User.find({username: user})
         if(!loggedUser){
@@ -52,7 +54,7 @@ export default {
                 res.send({message: "Password Incorrect"})
             }
             else{
-                const token = await jwt.sign({id: (loggedUser as any)._id},process.env.token)
+                const token = jwt.sign({id: (loggedUser as any)._id},(process.env.token as Secret))
                 res.send({
                     token: token,
                     username: user,
