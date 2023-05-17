@@ -10,12 +10,12 @@
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
     "@fortawesome/free-regular-svg-icons": "^6.4.0",
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
-    "bcrypt": "*",
-    "cors": "*",
+    "bcrypt": "",
+    "cors": "",
     "dotenv": "^16.0.3",
-    "express": "*",
-    "jsonwebtoken": "*",
-    "mongoose": "*",
+    "express": "",
+    "jsonwebtoken": "",
+    "mongoose": "",
     "typescript": "^5.0.4"
   },
   "devDependencies": {
@@ -23,11 +23,10 @@
     "@types/cors": "^2.8.13",
     "@types/dotenv": "^8.2.0",
     "@types/express": "^4.17.17",
-    "nodemon": "^2.0.22"
     "@types/jsonwebtoken": "^9.0.2",
     "@types/mongoose": "^5.11.97",
     "@types/node": "^20.1.5",
-    "nodemon": "*",
+    "nodemon": "",
     "ts-node": "^10.9.1"
   }
 }

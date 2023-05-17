@@ -9,6 +9,5 @@ interface SearchRequest extends Request{
   }
 search: (req: SearchRequest,res: Response)=>{
     const { query }=req.query
-    help.find({keyword: {$regex: new RegExp(query,"i")}}).then(items=>res.send(items))
+    help.find({keyword: {$regex: new RegExp(query,"i")}}).then(help=>res.send(help))
   }
-
