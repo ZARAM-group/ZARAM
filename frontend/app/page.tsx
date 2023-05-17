@@ -15,8 +15,8 @@ import man from"../assets/img/man.jpg"
 export default function Home() {
   return (
     <div>
-      <div id="pushImg"> 
-      
+      <div id="pushImg">
+        
       </div>
       <nav className="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
             <div className="container px-4 px-lg-5">
