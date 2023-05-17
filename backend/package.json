@@ -10,8 +10,6 @@
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
     "@fortawesome/free-regular-svg-icons": "^6.4.0",
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
-    "@types/dotenv": "^8.2.0",
-    "@types/mongoose": "^5.11.97",
     "bcrypt": "*",
     "cors": "*",
     "dotenv": "^16.0.3",
@@ -21,8 +19,11 @@
     "typescript": "^5.0.4"
   },
   "devDependencies": {
+    "@types/bcrypt": "^5.0.0",
     "@types/cors": "^2.8.13",
+    "@types/dotenv": "^8.2.0",
     "@types/express": "^4.17.17",
+    "@types/mongoose": "^5.11.97",
     "@types/node": "^20.1.5",
     "nodemon": "*",
     "ts-node": "^10.9.1"
