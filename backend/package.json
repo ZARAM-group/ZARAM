@@ -10,9 +10,12 @@
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
     "@fortawesome/free-regular-svg-icons": "^6.4.0",
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
-    "bcrypt": "*",
-    "cors": "*",
+    "bcrypt": "",
+    "cors": "",
     "dotenv": "^16.0.3",
+    "express": "",
+    "jsonwebtoken": "",
+    "mongoose": "",
     "express": "*",
     "jsonwebtoken": "^9.0.0",
     "mongoose": "*",
@@ -27,7 +30,7 @@
     "@types/jsonwebtoken": "^9.0.2",
     "@types/mongoose": "^5.11.97",
     "@types/node": "^20.1.5",
-    "nodemon": "*",
+    "nodemon": "",
     "ts-node": "^10.9.1"
   }
 }

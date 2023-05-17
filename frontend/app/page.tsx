@@ -27,7 +27,7 @@ export default function Home() {
 
                         <li className="nav-item"><Link href="/search"><Search/></Link></li>
                         <li className="nav-item"><Link className="nav-link" href="/login">LOG IN</Link></li>
-                        <li className="nav-item"><a className="nav-link" href="#projects">HELP</a></li>
+                        <li className="nav-item"><a className="nav-link" href="/help">HELP</a></li>
                         <li className="nav-item"><a className="nav-link" href="#bag"><Image id="bag" src={bag} alt=".."/></a></li>
                     </ul>
                 </div>
