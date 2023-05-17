@@ -4,6 +4,7 @@ import bcrypt from "bcrypt"
 import jwt, { Secret } from "jsonwebtoken"
 
 export default {
+
     getAll:(req: Request, res: Response)=> {
         User.find().then(User=>res.send(User))
       },
@@ -16,11 +17,12 @@ export default {
 
     removeFromCart:(req:Request , res: Response)=>{
         const{UserId,itemId}=req.params
-        
+        User.findByIdAndUpdate(UserId,{$pull:{cart:itemId}}).then(User=>res.send(User))
 
     },
 
     signup: async (req: Request, res: Response)=>{
+
         const { pass, fName, lName, email } = req.body
         const existingUser=await User.findOne({email: email})
         if(existingUser){
