@@ -7,16 +7,14 @@
 #menu{
   height: 25px;
     width: 25px;
-    transform: translate(-126px,-41px);
+    transform: translate(-115px,-27px);
 }
 
 #logo{
-  height: 200px; 
-  width: 200px;
-  transform: translate(-118px, -5px);
-    color: transparent;
-    width: 6.9cm;
-    height: 4.5cm;
+  color: transparent;
+    transform: translate(-92px, -8px);
+    width: 4.2cm;
+    height: 3.2cm
 }
 
 

@@ -6,6 +6,7 @@ import logo from "../assets/Logo.png"
 import Search from "../components/Search/Search"
 import bag from "../assets/img/bag.png"
 import menu from "../assets/img/menu.png"
+import pic2 from "../assets/img/pic2.jpg"
 
 export default function Home() {
   return (
@@ -25,7 +26,7 @@ export default function Home() {
                     <ul className="navbar-nav ms-auto">
 
                         <li className="nav-item"><Link href="/search"><Search/></Link></li>
-                        <li className="nav-item"><Link className="nav-link" href="/login">Log in</Link></li>
+                        <li className="nav-item"><Link className="nav-link" href="/login">LOG IN</Link></li>
                         <li className="nav-item"><a className="nav-link" href="#projects">HELP</a></li>
                         <li className="nav-item"><a className="nav-link" href="#bag"><Image id="bag" src={bag} alt=".."/></a></li>
                     </ul>
@@ -45,7 +46,7 @@ export default function Home() {
         <section className="projects-section bg-light" id="projects">
             <div className="container px-4 px-lg-5">
                 <div className="row gx-0 mb-4 mb-lg-5 align-items-center">
-                    <div className="col-xl-8 col-lg-7"><Image className="img-fluid mb-3 mb-lg-0" src={zarahome} alt="..." /></div>
+                    <div className="col-xl-8 col-lg-7"><Image className="img-fluid mb-3 mb-lg-0" src={pic2} alt="..." /></div>
                     <div className="col-xl-4 col-lg-5">
                         <div className="featured-text text-center text-lg-left">
                             <h4>Shoreline</h4>
@@ -54,12 +55,12 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="row gx-0 mb-5 mb-lg-0 justify-content-center">
-                    <div className="col-lg-6"><img className="img-fluid" src="assets/img/demo-image-01.jpg" alt="..." /></div>
+                    <div className="col-lg-6"><Image className="img-fluid" src={pic2} alt="..." /></div>
                     <div className="col-lg-6">
                         <div className="bg-black text-center h-100 project">
                             <div className="d-flex h-100">
                                 <div className="project-text w-100 my-auto text-center text-lg-left">
-                                    <h4 className="text-white">Misty</h4>
+                                    <h4 className="text-white">FASHION</h4>
                                     <p className="mb-0 text-white-50">An example of where you can put an image of a project, or anything else, along with a description.</p>
                                 </div>
                             </div>
@@ -67,7 +68,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="row gx-0 justify-content-center">
-                    <div className="col-lg-6"><img className="img-fluid" src="assets/img/demo-image-02.jpg" alt="..." /></div>
+                    <div className="col-lg-6"><Image className="img-fluid" src="" alt="..." /></div>
                     <div className="col-lg-6 order-lg-first">
                         <div className="bg-black text-center h-100 project">
                             <div className="d-flex h-100">
@@ -148,7 +149,7 @@ export default function Home() {
                     <a className="mx-2" href="#!"><i className="fab fa-github"></i></a>
                 </div>
             </div>
-            </section>
+            </section>       
     </div>
   )
 }

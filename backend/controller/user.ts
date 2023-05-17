@@ -17,7 +17,7 @@ export default {
 
     removeFromCart:(req:Request , res: Response)=>{
         const{UserId,itemId}=req.params
-        
+        User.findByIdAndUpdate(UserId,{$pull:{cart:itemId}}).then(User=>res.send(User))
 
     },
 
