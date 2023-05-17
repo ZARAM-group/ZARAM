@@ -1,0 +1,16 @@
+@font-face {
+  font-family: "default";
+  src: url("../../Fonts/Helvetica\ Neue\ UltraLight.ttf");
+}
+
+#search-bar{
+  font-family: "default";
+  background-color: inherit;
+  border: none;
+  border-bottom: 1px solid rgb(34, 34, 34);
+  outline: none;
+  cursor: pointer;
+  width: 130px;
+  height: 20px;
+  font-size: 12px;
+}
