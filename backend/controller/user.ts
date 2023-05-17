@@ -22,18 +22,18 @@ export default {
     },
 
     signup: async (req: Request, res: Response)=>{
-        const { user, pass, fName, lName, email } = req.body
-        const existingUser = await User.findOne({username: user})
+
+        const { pass, fName, lName, email } = req.body
+        const existingUser=await User.findOne({email: email})
         if(existingUser){
-            res.send({message: "Username Already Exists"})
+            res.send("Email Already Exists")
         }
         else{
-            const hashedPassword = await bcrypt.hash(pass,10)
+            const hashedPassword: String = await bcrypt.hash(pass,10)
             const newUser={
-                username: user,
                 password: hashedPassword,
-                firstName: fName,
-                lastName: lName,
+                fName: fName,
+                lName: lName,
                 email: email,
                 isAdmin: false,
                 cart: []
@@ -43,25 +43,24 @@ export default {
     },
 
     login: async (req: Request, res: Response)=>{
-        res.send(process.env.token)
-        const { user, pass } = req.body
-        const loggedUser = await User.find({username: user})
+        const { email, pass } = req.body
+        const loggedUser = await User.findOne({email: email})
         if(!loggedUser){
-            res.send({message: "User Doesn't Exist"})
+            res.send("Email Doesn't Exist")
         }
         else{
             if(await bcrypt.compare(pass,(loggedUser as any).password)){
-                res.send({message: "Password Incorrect"})
-            }
-            else{
                 const token = jwt.sign({id: (loggedUser as any)._id},(process.env.token as Secret))
                 res.send({
                     token: token,
-                    username: user,
+                    username: (loggedUser as any).username,
                     fName: (loggedUser as any).fName,
                     lName: (loggedUser as any).lName,
                     email: (loggedUser as any).email
                 })
+            }
+            else{
+                res.send("Password Incorrect")
             }
         }
     }

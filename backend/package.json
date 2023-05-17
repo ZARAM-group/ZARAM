@@ -16,6 +16,10 @@
     "express": "",
     "jsonwebtoken": "",
     "mongoose": "",
+    "express": "*",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "*",
+    "react-sidebar": "^3.0.2",
     "typescript": "^5.0.4"
   },
   "devDependencies": {
