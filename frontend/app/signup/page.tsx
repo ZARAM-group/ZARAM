@@ -43,6 +43,7 @@ const page = () => {
         <button onClick={handleSubmit}>LOG IN</button>
       </div>
      </div>
+
    )
 }
 

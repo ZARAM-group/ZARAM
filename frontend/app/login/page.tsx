@@ -23,8 +23,8 @@ const page = () => {
         alert("Password Incorrect")
       }
       else{
-        localStorage.setItem("currentUser",user.data)
-        console.log(localStorage.getItem("currentUser"))
+        localStorage.setItem("currentUser", JSON.stringify(user.data));
+        console.log(JSON.parse(localStorage.getItem("currentUser") as string))
       }
     })
   }
