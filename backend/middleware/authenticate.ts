@@ -1,4 +1,5 @@
-import jwt from "jsonwebtoken"
+
+import jwt, { Secret } from "jsonwebtoken"
 import { Request, Response, NextFunction } from "express";
 
 const authenticate = async (req: Request,res: Response,next: NextFunction)=>{
@@ -10,8 +11,7 @@ const authenticate = async (req: Request,res: Response,next: NextFunction)=>{
   }
   
   try{
-    jwt.verify((token as string), (process.env.token as string))
-
+    jwt.verify((token as string), (process.env.token as Secret))
     next()
   }
   catch(err){

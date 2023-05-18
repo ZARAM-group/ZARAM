@@ -3,7 +3,6 @@ import mongoose, { Schema, Document } from "mongoose";
 export interface User extends Document {
   fName: string;
   lName: string;
-  username: string;
   password: string;
   email: string;
   isAdmin: boolean;
@@ -13,7 +12,6 @@ export interface User extends Document {
 const userSchema: Schema = new Schema({
   fName: String,
   lName: String,
-  username: String,
   password: String,
   email: String,
   isAdmin: Boolean,
