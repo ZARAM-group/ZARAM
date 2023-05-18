@@ -6,7 +6,17 @@ import Navbar from "../../components/Navbar/Navbar";
 import OneItem from "../../components/OneItem/OneItem";
 import "./Search.css"
 
-interface items{}
+interface items{
+  name?: string;
+  price?: number;
+  image?: string
+}
+
+interface OneItem{
+  name: string;
+
+}
+
 
 const page = () => {
 
@@ -28,8 +38,8 @@ const page = () => {
         <input type="text" onChange={e=>setQuery(e.target.value)} placeholder="SEARCH FOR AN ITEM, COLOR, COLLECTION..."/>
       </div>
       <div id="items-container">
-        {items.map((e,index)=>{
-          <OneItem key={index}/>
+        {items.map((e,i)=>{
+          return <OneItem key={i} name={e.name} price={e.price} image={e.image} />
         })}
       </div>
     </div>
