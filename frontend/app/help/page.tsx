@@ -2,7 +2,8 @@
 import { useState, useEffect } from "react";
 import "./help.css";
 import axios from "axios";
-
+import Navbar from "../../components/Navbar/Navbar";
+// import Help from "../../components/help/help";
 const Helpbar = () => {
   const [data, setData] = useState([]);
 
@@ -10,7 +11,7 @@ const Helpbar = () => {
     fetchData();
   }, []);
 
-  const apiUrl = 'http://localhost:3001';
+  const apiUrl = 'http://localhost:3001/help/';
 
   const fetchData = async () => {
     try {
@@ -23,6 +24,7 @@ const Helpbar = () => {
 
   return (
     <div>
+      <Navbar/>
       <div className="form__group field">
         <h3>HOW CAN WE HELP YOU?</h3>
         <input type="input" className="form__field" placeholder="Name" name="name" id="name" required />

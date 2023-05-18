@@ -1,37 +1,22 @@
+"use client"
 import Image from 'next/image'
-import Link from "next/link"
 import "./styles.css"
 import zarahome from "../assets/img/zarahome.jpg"
-import logo from "../assets/Logo.png"
-import Search from "../components/Search/Search"
-import bag from "../assets/img/bag.png"
-import menu from "../assets/img/menu.png"
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.min.js';
+
 import pic2 from "../assets/img/pic2.jpg"
 import kidszara from "../assets/img/kidszara.jpg"
 import man from"../assets/img/man.jpg"
-
-
+import Navbar from '../components/Navbar/Navbar'
+import Offcanvas from '../components/Offcanvas/Offcanvas';
 
 export default function Home() {
+
   return (
     <div>
-      <div id="pushImg">
-      </div>
-      <nav className="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-            <div className="container px-4 px-lg-5">
-              <Image id='menu' src={menu} alt="..." />
-                <Image id="logo" className="navbar-brand" src={logo} alt="..." />
-                <div className="collapse navbar-collapse" id="navbarResponsive">
-                    <ul className="navbar-nav ms-auto">
-
-                        <li className="nav-item"><Link href="/search"><Search/></Link></li>
-                        <li className="nav-item"><Link className="nav-link" href="/login">LOG IN</Link></li>
-                        <li className="nav-item"><a className="nav-link" href="/help">HELP</a></li>
-                        <li className="nav-item"><a className="nav-link" href="#bag"><Image id="bag" src={bag} alt=".."/></a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        <Navbar/>
+        <Offcanvas/>
         <header className="masthead">
             <div className="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
                 <div className="d-flex justify-content-center">

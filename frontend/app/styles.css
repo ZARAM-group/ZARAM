@@ -13,20 +13,6 @@
   color: black
 }
 
-#menu{
-  height: 25px;
-    width: 25px;
-    transform: translate(-115px,-27px);
-}
-
-#logo{
-  color: transparent;
-  transform: translate(14px, -9px);
-    width: 5.2cm;
-    height: 3.2cm
-}
-
-
 #pushImg{
   height: 130px;
   background-color: white;

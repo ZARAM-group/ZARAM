@@ -1,13 +1,16 @@
-import { Request, Response } from "express"
-import help from "../model/help"
+import { Request, Response } from 'express';
+import HelpModel from "../model/help"
 
 
-interface help extends Request{
+interface Search extends Request{
     query:{
       query: string
     }
   }
-search: (req: help,res: Response)=>{
+export default {
+searchHelp: (req: Search,res: Response)=>{
     const { query }=req.query
-    help.find({keyword: {$regex: new RegExp(query,"i")}}).then(help=>res.send(help))
+    console.log(query)
+    HelpModel.find({question: query}).then(help=>res.send(help))
   }
+}

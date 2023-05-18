@@ -1,7 +1,10 @@
+import Gender from "../../components/Gender/Gender";
+import "./Search.css"
+
 const page = () => {
   return (
     <div>
-      sss
+      <Gender/>
     </div>
   );
 };
