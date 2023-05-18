@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
 
-const SearchPage: React.FC = () => {
+const Help: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
   const handleSearch = (event: React.FormEvent) => {
     event.preventDefault();
-    // Perform search logic with the search term
     console.log('Searching for:', searchTerm);
-    // Reset the search term
     setSearchTerm('');
   };
 
@@ -31,4 +29,4 @@ const SearchPage: React.FC = () => {
   );
 };
 
-export default SearchPage;
+export default Help;
