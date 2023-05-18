@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "default";
+  src: url("../../Fonts/Helvetica\ Neue\ UltraLight.ttf");
+}
+
+@font-face {
+  font-family: "medium";
+  src: url("../../Fonts/Helvetica\ Neue\ W01\ 66\ Medium\ It.ttf");
+}
+
+#search-gender-container{
+  margin: 20px;
+}
+
+#search-gender-container input{
+  margin-top: 40px;
+  width: 1250px;
+  border: none; 
+  border-bottom: 1px solid gray;
+  font-family: "default";
+  outline: none;
+}
