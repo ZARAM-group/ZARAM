@@ -1,6 +1,5 @@
 "use client"
 import { useState } from "react";
-import Link from "next/link"
 import WomanItems from "./womanItems";
 import ManItems from "./manItems";
 import KidsItems from "./kidsItems";
