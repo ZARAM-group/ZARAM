@@ -1,16 +1,16 @@
 import mongoose, { Schema, Document } from 'mongoose';
 
-export interface help extends Document {
+export interface Help extends Document {
     question: string;
-    keyword: string;
     answer: string;
+    keyword: string;
   }
   
   const helpSchema: Schema = new Schema({
     question: String,
+    answer: String,
     keyword: String,
-    Answer: String,
   });
 
-  const HelpModel = mongoose.model<help>('help', helpSchema);
+  const HelpModel = mongoose.model<Help>('help', helpSchema);
   export default HelpModel;

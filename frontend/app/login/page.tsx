@@ -3,7 +3,8 @@ import { useState } from "react";
 import "./login.css"
 import axios from "axios";
 import Link from "next/link";
-
+import Navbar from "../../components/Navbar/Navbar";
+import"../styles.css"
 
 const page = () => {
 
@@ -30,8 +31,9 @@ const page = () => {
     })
   }
   return (
-    
+
     <div   className='container-login'>
+  <Navbar/>
   <div className='Left-login-form'>
   <h3 className='login-heading'>LOG IN TO YOUR ACCOUNT</h3>
  <div className='form-input-label'>
