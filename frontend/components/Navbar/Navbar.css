@@ -1,0 +1,17 @@
+#menu-button{
+  cursor: pointer;
+}
+
+#menu{
+  height: 25px;
+  width: 25px;
+  margin-left: 20px;
+  margin-bottom: 60px;
+  cursor: pointer;
+}
+
+#logo{
+  color: transparent;
+  width: 5.2cm;
+  height: 3.2cm
+}
