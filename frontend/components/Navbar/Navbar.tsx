@@ -4,6 +4,7 @@ import bag from "../../assets/img/bag.png"
 import menu from "../../assets/img/menu.png"
 import logo from "../../assets/Logo.png"
 import Search from "../Search/Search"
+import Offcanvas from "../Offcanvas/Offcanvas"
 import "./Navbar.css"
 
 
@@ -14,6 +15,7 @@ interface NavbarProps {
 const Navbar: React.FC<NavbarProps> = ({showSearch}) => {
   return (
     <div>
+      <Offcanvas/>
       <div id="pushImg">
         
         </div>
