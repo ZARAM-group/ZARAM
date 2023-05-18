@@ -1,10 +1,11 @@
 import Gender from "../../components/Gender/Gender";
-import "./Search.css"
+import Navbar from "../../components/Navbar/Navbar";
+import "../Styles.css"
 
 const page = () => {
   return (
     <div>
-      <Gender/>
+      <Navbar showSearch={false}/>
     </div>
   );
 };

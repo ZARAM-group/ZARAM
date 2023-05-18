@@ -6,7 +6,12 @@ import logo from "../../assets/Logo.png"
 import Search from "../Search/Search"
 import "./Navbar.css"
 
-const Navbar = () => {
+
+interface NavbarProps {
+  showSearch?: boolean
+}
+
+const Navbar: React.FC<NavbarProps> = ({showSearch}) => {
   return (
     <div>
       <div id="pushImg">
@@ -18,7 +23,7 @@ const Navbar = () => {
                   <Image id="logo" className="navbar-brand" src={logo} alt="..." />
                   <div className="collapse navbar-collapse" id="navbarResponsive">
                       <ul className="navbar-nav ms-auto">
-                          <li className="nav-item"><Link href="/search"><Search/></Link></li>
+                          {showSearch!==false && <li className="nav-item"><Link href="/search"><Search/></Link></li>}
                           <li className="nav-item"><Link className="nav-link" href="/login">LOG IN</Link></li>
                           <li className="nav-item"><a className="nav-link" href="/help">HELP</a></li>
                           <li className="nav-item"><a className="nav-link" href="#bag"><Image id="bag" src={bag} alt=".."/></a></li>
