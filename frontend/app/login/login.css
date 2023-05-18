@@ -1,6 +1,5 @@
 .container{
   width: 100%;
-   border: 1px solid red; 
   display: flex;
   margin: 4%;
 }
@@ -12,8 +11,6 @@ input[type=text]{
   border: none;
   border-bottom: 1px solid gray;
   font-size:70%;
-
-
 }
 .number-box{
   display: flex;
@@ -53,7 +50,6 @@ margin-top: 16%;
 }
 
 .Left-form{
- border: 1px solid red;
   width: 30%;
 }
 .right-form{
