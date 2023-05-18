@@ -6,6 +6,7 @@ import logo from "../../assets/Logo.png"
 import Search from "../Search/Search"
 import Offcanvas from "../Offcanvas/Offcanvas"
 import "./Navbar.css"
+import "../../app/Styles.css"
 
 
 interface NavbarProps {

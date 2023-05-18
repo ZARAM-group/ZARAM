@@ -1,3 +1,5 @@
+import "./gender.css"
+
 const Gender = () => {
   return (
     <div id="gender-container">

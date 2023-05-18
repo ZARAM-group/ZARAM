@@ -8,7 +8,6 @@ import pic2 from "../assets/img/pic2.jpg"
 import kidszara from "../assets/img/kidszara.jpg"
 import man from"../assets/img/man.jpg"
 import Navbar from '../components/Navbar/Navbar'
-import Offcanvas from '../components/Offcanvas/Offcanvas';
 
 export default function Home() {
 
