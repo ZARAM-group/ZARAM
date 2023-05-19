@@ -14,12 +14,12 @@ const OneItem: React.FC<OneItemProps> = ({id,name,price,image,showAdd}) => {
   return (
     <div>
       <div className="item-container">
-        <img src={image} alt="image" width={300} height={500}/>
+        <img src={image} alt="image" width={206} height={309}/>
         <div className="details-container">
           <p className="detail-text">{name}</p>
-          <p className="detail-text">{price} TND</p>
-          {showAdd!==false && <AddToCart id={id}/>}
+          <p className="detail-text" style={{position: "absolute", transform: "translateX(165px)"}}>{price} TND</p>
         </div>
+        {showAdd!==false && <AddToCart id={id}/>}
       </div>
     </div>
   );
