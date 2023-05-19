@@ -30,8 +30,30 @@ export default {
     items.find({size: size}).then(items=>res.send(items))
   },
 
-  search: (req: SearchRequest,res: Response)=>{
+  searchWoman: (req: SearchRequest, res: Response)=>{
     const { query }=req.query
-    items.find({keyword: {$regex: new RegExp(query,"i")}}).then(items=>res.send(items))
+    items.find({
+      $and:[
+        {keyword: {$regex: new RegExp(query,"i")}},
+        {gender: "female"}
+    ]}).then(found=>res.send(found))
+  },
+
+  searchMan: (req: SearchRequest, res: Response)=>{
+    const { query }=req.query
+    items.find({
+      $and:[
+        {keyword: {$regex: new RegExp(query,"i")}},
+        {gender: "male"}
+    ]}).then(found=>res.send(found))
+  },
+
+  searchKids: (req: SearchRequest, res: Response)=>{
+    const { query }=req.query
+    items.find({
+      $and:[
+        {keyword: {$regex: new RegExp(query,"i")}},
+        {gender: "kids"}
+    ]}).then(found=>res.send(found))
   }
 }
