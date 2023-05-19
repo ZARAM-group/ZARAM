@@ -23,7 +23,7 @@ const Helpbar = () => {
   };
 
   return (
-    <div>
+    <div className="help">
       <Navbar/>
       <div className="form__group field">
         <h3>HOW CAN WE HELP YOU?</h3>
