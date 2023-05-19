@@ -1,5 +1,6 @@
 import { Request, Response } from "express"
 import items from "../model/items"
+import user from "../model/user"
 
 interface SearchRequest extends Request{
   query:{
@@ -67,8 +68,20 @@ export default {
     }).then(found=>res.send(found))
   },
 
-  getCartItems: (req: Request, res: Response)=>{
-    const { id } = req.params
-    items.findOne({_id: id}).then(data=>res.send(data))
+  getCartItems: async (req: Request, res: Response) => {
+    const { id } = req.params;
+    const currentUser = await user.findOne({ _id: id });
+    const cart = (currentUser as any).cart;
+  
+    const cartItems: any = []
+  
+    await Promise.all(
+      cart.map(async (e: any) => {
+        const currentItem: any = await items.findOne({ _id: e });
+        cartItems.push(currentItem as any)
+      })
+    )
+    
+    res.send(cartItems)
   }
 }

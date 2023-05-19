@@ -3,7 +3,16 @@
   src: url("../../Fonts/Neue\ Helvetica\ Condensed\ BQ\ Regular.otf");
 }
 
+.item-container{
+  margin: 20px;
+}
+
+.details-container{
+  display: flex;
+  flex-direction: row;
+}
+
 .detail-text{
   font-family: "zara";
-  font-size: 10px;
+  font-size: 13px;
 }
