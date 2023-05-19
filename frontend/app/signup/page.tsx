@@ -42,12 +42,7 @@ const page = () => {
         <input type="text" placeholder="SURNAME" onChange={e=>setLname(e.target.value)}/>
         <button onClick={handleSubmit}>LOG IN</button>
       </div>
-
     </div>
-
-    
-
-
    )
 }
 

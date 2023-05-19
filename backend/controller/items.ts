@@ -58,11 +58,11 @@ export default {
   },
 
   offcanvasSearch: (req: Request, res: Response)=>{
-    const { gender, types }=req.body
+    const { gender, type }=req.body
     items.find({
       $and: [
         {gender: gender},
-        {types: types}
+        {type: type}
       ]
     }).then(found=>res.send(found))
   }
