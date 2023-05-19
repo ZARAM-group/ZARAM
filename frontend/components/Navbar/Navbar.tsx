@@ -14,9 +14,10 @@ import "../../app/Styles.css"
 interface NavbarProps {
   showSearch?: boolean
   showCart?: boolean
+  showOffcanvas?: boolean
 }
 
-const Navbar: React.FC<NavbarProps> = ({showSearch,showCart}) => {
+const Navbar: React.FC<NavbarProps> = ({showSearch,showCart,showOffcanvas}) => {
 
   const router=useRouter()
   const currentUser=JSON.parse(localStorage.getItem("currentUser") as any)
@@ -37,7 +38,7 @@ const Navbar: React.FC<NavbarProps> = ({showSearch,showCart}) => {
         
         </div>
         <nav className="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-              <Image id='menu' src={menu} alt="..." data-bs-toggle="offcanvas" data-bs-target="#myOffcanvas"/>
+              {showOffcanvas!==false && <Image id='menu' src={menu} alt="..." data-bs-toggle="offcanvas" data-bs-target="#myOffcanvas"/>}
               <div className="container px-4 px-lg-5">
                   <Link href="/"><Image id="logo" className="navbar-brand" src={logo} alt="..." style={{cursor: "pointer"}}/></Link>
                   <div className="collapse navbar-collapse" id="navbarResponsive">
