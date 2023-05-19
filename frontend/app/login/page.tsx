@@ -35,7 +35,7 @@ const page = () => {
     <div className='container-login'>
   <Navbar/>
   <div className='Left-login-form'>
-  <h3 className='login-heading'>LOG IN TO YOUR ACCOUNT</h3>
+  <h6 className='login-heading'>LOG IN TO YOUR ACCOUNT</h6>
 
  <div className='form-input-label'>
       <input  className='form-input-label'type="email"name="email" placeholder='E-MAIL' onChange={e=>setEmail(e.target.value)}/>
@@ -52,7 +52,7 @@ const page = () => {
  
 
 <div className='right-login-form'>
-<h4 >NEED ACCOUNT</h4>
+<h4  id="need">NEED ACCOUNT ?</h4>
 <Link  href="/signup" className="create-btn" type="button" >CREATE ACCOUNT </Link>
   </div>
 
