@@ -55,5 +55,15 @@ export default {
         {keyword: {$regex: new RegExp(query,"i")}},
         {gender: "kids"}
     ]}).then(found=>res.send(found))
+  },
+
+  offcanvasSearch: (req: Request, res: Response)=>{
+    const { gender, types }=req.body
+    items.find({
+      $and: [
+        {gender: gender},
+        {types: types}
+      ]
+    }).then(found=>res.send(found))
   }
 }

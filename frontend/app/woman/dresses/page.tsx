@@ -8,13 +8,16 @@ import axios from "axios";
 const page = () => {
   useEffect(()=>{
     axios.get(`localhost:3001/`)
-    .then(Help=>{
-      setItems(Help.data)
+    .then(women=>{
+      setItems(women.data)
     })
-  },[query])
+  })
   return (
     <div>
       <Navbar/>
+      <dev>
+        
+      </dev>
     </div>
   );
 };
