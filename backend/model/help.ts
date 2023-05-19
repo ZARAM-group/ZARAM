@@ -6,11 +6,11 @@ export interface Help extends Document {
     keyword: string;
   }
   
-  const helpSchema: Schema = new Schema({
+  const Help: Schema = new Schema({
     question: String,
     answer: String,
     keyword: String,
   });
 
-  const HelpModel = mongoose.model<Help>('help', helpSchema);
+  const HelpModel = mongoose.model<Help>('help', Help);
   export default HelpModel;

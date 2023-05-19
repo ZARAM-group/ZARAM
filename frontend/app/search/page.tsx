@@ -14,7 +14,6 @@ interface items{
 
 interface OneItem{
   name: string;
-
 }
 
 
