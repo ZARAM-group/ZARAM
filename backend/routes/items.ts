@@ -12,6 +12,7 @@ router.get("/searchWoman", item.searchWoman)
 router.get("/searchMan", item.searchMan)
 router.get("/searchKids", item.searchKids)
 
+router.post("/searchCategory", item.offcanvasSearch)
 router.post("/add", authenticate, item.add)
 
 export default router;
