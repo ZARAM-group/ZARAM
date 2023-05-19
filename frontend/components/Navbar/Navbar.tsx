@@ -53,8 +53,8 @@ const Navbar: React.FC<NavbarProps> = ({showSearch,showCart,showOffcanvas}) => {
                   <div className="collapse navbar-collapse" id="navbarResponsive">
                       <ul className="navbar-nav ms-auto">
                           {showSearch!==false && <li className="nav-item"><Link href="/search"><Search/></Link></li>}
-                          {currentUser!==null && <li className="nav-item"><Link className="nav-link" href="/login">LOG IN</Link></li>}
-                          {!currentUser && <li className="nav-item"><Link className="nav-link" href="/" onClick={logout}>LOGOUT</Link></li>}
+                          {!currentUser && <li className="nav-item"><Link className="nav-link" href="/login">LOG IN</Link></li>}
+                          {currentUser && <li className="nav-item"><Link className="nav-link" href="/" onClick={logout}>LOGOUT</Link></li>}
                           <li className="nav-item"><a className="nav-link" href="/help">HELP</a></li>
                           {showCart!==false && <li className="nav-item"><div className="nav-link" onClick={goToCart} style={{cursor: "pointer"}}><Image id="bag" src={bag} alt=".."/></div></li>}
                       </ul>

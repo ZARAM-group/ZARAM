@@ -3,7 +3,8 @@
   src: url("../../Fonts/Neue\ Helvetica\ Condensed\ BQ\ Regular.otf");
 }
 
-.detail-text{
+#add-button{
+  background-color: black;
+  color: white;
   font-family: "zara";
-  font-size: 10px;
 }
