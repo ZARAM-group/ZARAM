@@ -1,4 +1,5 @@
 "use client"
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import "./login.css"
 import axios from "axios";
@@ -10,6 +11,7 @@ const page = () => {
 
   const [email,setEmail]=useState("")
   const [password,setPassword]=useState("")
+  const router=useRouter()
 
   const handleSubmit=()=>{
     const credentials={
@@ -27,6 +29,7 @@ const page = () => {
       else{
         localStorage.setItem("currentUser", JSON.stringify(user.data));
         console.log(JSON.parse(localStorage.getItem("currentUser") as string))
+        router.push("/")
       }
     })
   }
