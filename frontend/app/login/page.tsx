@@ -32,10 +32,11 @@ const page = () => {
   }
   return (
 
-    <div   className='container-login'>
+    <div className='container-login'>
   <Navbar/>
   <div className='Left-login-form'>
   <h3 className='login-heading'>LOG IN TO YOUR ACCOUNT</h3>
+
  <div className='form-input-label'>
       <input  className='form-input-label'type="email"name="email" placeholder='E-MAIL' onChange={e=>setEmail(e.target.value)}/>
   </div>

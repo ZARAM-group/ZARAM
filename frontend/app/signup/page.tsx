@@ -42,12 +42,12 @@ const page = () => {
         <input type="text" placeholder="SURNAME" onChange={e=>setLname(e.target.value)}/>
         <button onClick={handleSubmit}>LOG IN</button>
       </div>
-<<<<<<< HEAD
-    </div>
-=======
-     </div>
 
->>>>>>> ff9676a45c599c59747cb3fbc97c2e4fb24bcefc
+    </div>
+
+    
+
+
    )
 }
 
