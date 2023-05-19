@@ -1,7 +1,6 @@
 "use client"
 import Image from 'next/image'
 import "./styles.css"
-import zarahome from "../assets/img/zarahome.jpg"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import pic2 from "../assets/img/pic2.jpg"
