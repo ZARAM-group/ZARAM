@@ -1,3 +1,16 @@
+@font-face {
+  font-family: "zara";
+  src: url("../../Fonts/Neue\ Helvetica\ Condensed\ BQ\ Regular.otf");
+}
+
+
 #cart-container{
-  margin-left: 1rem;
+  margin-left: 4rem;
+  font-size: 15px;
+  font-family: "zara";
+  font-weight: 100;
+}
+
+#cart-image{
+  margin: 120px;
 }
