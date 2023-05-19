@@ -3,6 +3,8 @@
 import { useState } from "react";
 import axios from "axios"
 import "./signup.css"
+import Navbar from "../../components/Navbar/Navbar"
+import"../styles.css"
 
 const page = () => {
 
@@ -33,16 +35,28 @@ const page = () => {
 
   return (
    
-    <div>
-      <div className="signup-container">
-        <h6>LOG INTO YOUR ACCOUNT</h6>
-        <input type="email" placeholder="E-MAIL" onChange={e=>setEmail(e.target.value)}/>
-        <input type="password" placeholder="PASSWORD" onChange={e=>setPassword(e.target.value)}/>
-        <input type="text" placeholder="NAME" onChange={e=>setFname(e.target.value)}/>
-        <input type="text" placeholder="SURNAME" onChange={e=>setLname(e.target.value)}/>
-        <button onClick={handleSubmit}>LOG IN</button>
-      </div>
+    <div className='container-login'>
+    <Navbar/>
+    <div className='Left-login-form'>
+    <h6 className='login-heading'>CREATE AN ACCOUNT</h6>
+  
+   <div className='form-input-label'>
+        <input  className='form-input-label'type="email"name="email" placeholder='E-MAIL' onChange={e=>setEmail(e.target.value)}/>
     </div>
+    <div className='form-input-label'>
+        <input  className='form-input-label' type="password" placeholder='PASSWORD'  onChange={(e) => setPassword(e.target.value)}/>
+    </div>
+  <div className='form-input-label'>
+        <input  className='form-input-label'type="Name"name="fName" placeholder='FirstName' onChange={e=>setFname(e.target.value)}/>
+    </div>
+  <div className='form-input-label'>
+        <input  className='form-input-label'type="email"name="lname" placeholder='LastName' onChange={e=>setLname(e.target.value)}/>
+    </div>
+    <button  className="login-btn" onClick={handleSubmit}>CREATE ACCOUNT</button> <br></br>
+    
+  
+    </div>
+   </div>
    )
 }
 
