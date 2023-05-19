@@ -67,7 +67,7 @@ const page = () => {
       </div>
       <div id="items-container">
         {items.map((e, i) => {
-          return <OneItem key={i} name={e.name} price={e.price} image={e.image} />;
+          return <OneItem key={i} id={e._id} name={e.name} price={e.price} image={e.image} />;
         })}
       </div>
     </div>

@@ -1,5 +1,6 @@
 "use client"
-import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { useState, useEffect } from "react";
 import "./login.css"
 import axios from "axios";
 import Link from "next/link";
@@ -8,8 +9,16 @@ import"../styles.css"
 
 const page = () => {
 
+  const currentUser=JSON.parse(localStorage.getItem("currentUser") as any)
   const [email,setEmail]=useState("")
   const [password,setPassword]=useState("")
+  const router=useRouter()
+
+  useEffect(()=>{
+    if(currentUser){
+      router.push("/")
+    }
+  },[])
 
   const handleSubmit=()=>{
     const credentials={
@@ -27,6 +36,7 @@ const page = () => {
       else{
         localStorage.setItem("currentUser", JSON.stringify(user.data));
         console.log(JSON.parse(localStorage.getItem("currentUser") as string))
+        router.push("/")
       }
     })
   }

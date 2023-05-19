@@ -10,8 +10,8 @@ export default {
       },
 
     addToCart:(req: Request, res: Response)=>{
-        const {UserId,itemId}=req.params
-        User.findByIdAndUpdate(UserId,{$push:{cart:itemId}}).then(User=>res.send(User))
+        const {userId,itemId}=req.body
+        User.findByIdAndUpdate(userId,{$push:{cart:itemId}}).then(data=>res.send(data))
     },
 
 
@@ -53,16 +53,33 @@ export default {
                 const token = jwt.sign({id: (loggedUser as any)._id},(process.env.token as Secret))
                 res.send({
                     token: token,
+                    id: (loggedUser as any)._id,
                     username: (loggedUser as any).username,
                     fName: (loggedUser as any).fName,
                     lName: (loggedUser as any).lName,
-                    email: (loggedUser as any).email
+                    email: (loggedUser as any).email,
+                    cart: (loggedUser as any).cart
                 })
             }
             else{
                 res.send("Password Incorrect")
             }
         }
+    },
+    
+    refreshUser: async (req: Request, res: Response)=>{
+        const { id }=req.params
+        const loggedUser = await User.findOne({_id: id})
+        const token = jwt.sign({id: (loggedUser as any)._id},(process.env.token as Secret))
+        res.send({
+            token: token,
+            id: (loggedUser as any)._id,
+            username: (loggedUser as any).username,
+            fName: (loggedUser as any).fName,
+            lName: (loggedUser as any).lName,
+            email: (loggedUser as any).email,
+            cart: (loggedUser as any).cart
+        })
     }
 }
 
