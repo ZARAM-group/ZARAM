@@ -65,5 +65,10 @@ export default {
         {type: type}
       ]
     }).then(found=>res.send(found))
+  },
+
+  getCartItems: (req: Request, res: Response)=>{
+    const { id } = req.params
+    items.findOne({_id: id}).then(data=>res.send(data))
   }
 }
