@@ -9,9 +9,9 @@ const page = () => {
   const [items,setItems]=useState<any[]>([])
 
   useEffect(()=>{
-    axios.post(`http://localhost:3001/items/searchCategory`,{gender: "male",type: "jean"})
-    .then(man=>{
-      setItems(man.data)
+    axios.post(`http://localhost:3001/items/searchCategory`,{gender: "female",type: "waistcoasts"})
+    .then(women=>{
+      setItems(women.data)
     })
   })
   return (
@@ -25,5 +25,6 @@ const page = () => {
     </div>
   );
 };
+
 
 export default page;
